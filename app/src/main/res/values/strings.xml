@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BitApp</string>
+    <string name="open_price_title">Open price</string>
+    <string name="daily_change_title">Daily Change</string>
+    <string name="top_bid_title">Top Bid</string>
+    <string name="lowest_ask_title">Lowest Ask</string>
+    <string name="last_price_title">Last Price</string>
+    <string name="range_title">24hr range</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="amount">Amount</string>
+    <string name="price">Price</string>
+    <string name="time">Time</string>
+    <string name="waiting_for_any_trade_to_happen">Waiting for any trade to happen</string>
+    <string name="waiting_for_response">Fetching All the pairs</string>
+    <string name="header">Header</string>
+    <string name="back">Back</string>
+    <string name="pair_switcher">Pair Switcher</string>
+    <string name="internet_problem">Please connect your device with internet and restart the application</string>
+    <string name="general_error_msg">Something went wrong</string>
+    <string name="price_with_colon">Price: </string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fifty_percent_ratio" format="float" type="dimen">0.5</item>
+    <item name="first_half_ratio_trade_screen" format="float" type="dimen">0.33</item>
+    <item name="second_half_ratio_trade_screen" format="float" type="dimen">0.66</item>
+    <dimen name="detail_screen_start_end_margin">10dp</dimen>
+</resources>

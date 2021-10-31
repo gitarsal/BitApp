@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.project.bitapp.domain.model.AllPairItem" />
+
+        <variable
+            name="clickListener"
+            type="com.project.bitapp.presentation.pairlisting.ClickListener" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_200"
+            android:onClick="@{() -> clickListener.onClick(data)}"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/pair_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.name}"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pair_last_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{data.lastPrice}"
+                android:textColor="@{data.dailyChange>= 0?@color/green:@color/red}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pair_name_tv" />
+
+            <TextView
+                android:id="@+id/pair_daily_change_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.dailyChangePercentage}"
+                android:textColor="@{data.dailyChange>= 0?@color/green:@color/red}"
+                app:layout_constraintBottom_toBottomOf="@+id/pair_last_price_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pair_last_price_tv"
+                app:layout_constraintTop_toTopOf="@+id/pair_last_price_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</layout>
