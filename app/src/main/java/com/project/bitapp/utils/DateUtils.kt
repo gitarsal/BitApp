@@ -1,7 +1,7 @@
-package com.android.bitapp.utils.interfaces
+package com.project.bitapp.utils
 
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.* // ktlint-disable no-wildcard-imports
 
 fun getDate(milliSeconds: Long): String {
     val dateFormat = SimpleDateFormat("hh.mm aa", Locale.getDefault())
@@ -9,5 +9,3 @@ fun getDate(milliSeconds: Long): String {
     calendar.timeInMillis = milliSeconds
     return dateFormat.format(calendar.time)
 }
-
-

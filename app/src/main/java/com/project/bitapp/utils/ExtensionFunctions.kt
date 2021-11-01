@@ -1,6 +1,5 @@
 package com.project.bitapp.utils
 
-import com.android.bitapp.utils.interfaces.getDate
 import com.project.bitapp.domain.model.AllPairItem
 import com.project.bitapp.domain.model.TickerChannel
 import com.project.bitapp.domain.model.Trade
